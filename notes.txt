@@ -1,0 +1,154 @@
+As Now, i have covered complete Tutorial is better to complete the documentation of the complete. 
+TypeScript and move forward. 
+
+Learn TypeScript – Full Tutorial
+================================
+https://www.youtube.com/watch?v=30LWjhZzg50&t=1699s
+
+
+typescript docs (https://www.typescriptlang.org/)
+==================================================
+
+github source code (https://github.com/hiteshchoudhary/typescript-youtube-22)
+==============================================================================
+
+
+In playlist 
+node -> 16.*.*
+typescript -> 4.8.2
+
+Mine.
+node -> 18.*
+typescript version -> 5.1.3
+
+I install typescript globally using cmd
+npm install -g typescript.
+
+tsc -version or -v
+
+
+TypeScript
+===========
+
+=> It is a dev tool not a programming language
+=> .ts code converted to .js  (compiled/transpiled see later)
+=> So, when we create a ts file it is essential to convert it to .js
+=> tsc filename.ts
+
+=> A lots people believe that .ts take lesser line of code than .js
+    but the reverse is true in reality to generate same code .ts take
+    many more line than .js. but at the time it provide less error prone
+
+=> In typescript docx we have playground on which we can alter config file
+    which is used in projects such as react.js or next.js project see later
+    in detail when we develop a project.
+
+=> Hitesh, highly encourage to read the docs of typescript.
+
+=> TypeScript is most about types.
+
+    Go and real this page. 
+    https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+    read till -> https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces
+    on [24-06-2023]
+
+    (Additionally i have read it as well!)
+    https://www.typescriptlang.org/docs/handbook/2/basic-types.html
+    read completely on [24-06-2023]
+
+
+What Situation is best to use TypeScript
+========================================
+
+=> A function accepts 2 numbers.
+=> A function return a string. 
+
+
+syntax
+======
+
+let variableName: type = value; 
+
+=> we getting a error [ Cannot redeclare block-scoped variable 'user' ]
+    we have dedicated error for this in later. 
+    for now, add 
+    export {}
+    to code and error disappears!!.
+ 
+=> typeScript also make sure we are using correct method of the type.
+    like, a static typed language.
+    because, typescript actually is provide us functionality of static 
+    type language
+
+=> Go to, 01INTRO
+=> Go to, 02BASICS 
+
+
+/************03PURETS****************/
+
+We are developing a PRODUCTION LEVEL Code
+`tsc --init` -> gives you tsconfig.json file for configuration of .ts to .js
+`npm init -y` -> -y for all yes
+
+now create project structure
+touch index.html -> go to and add boilerplate code and add script tag
+                     with address of dist/index.js within body 
+mkdir dist src
+cd src
+touch index.ts
+
+In tsconfig.json
+// "outDir": "./",  /* Specify an output folder for all emitted files. */
+uncomment it 
+"outDir": "./dist", /* Specify an output folder for all emitted files. */
+
+=> By above commend the tsc command search .ts file in whole project directory 
+    and automatically loads .js file is specified folder 
+
+=> Use `tsc --watch` command to automatically update files from .ts -> .js
+
+RUN index.html
+==============
+
+=> We can use live server extension
+OR  
+=> install lite-server with `npm i lite-server`
+=> We can use, any server, like live-server extension or lite-server extension
+=> Go, to package.json
+=> 
+`"scripts": {
+    "start": "lite-server",
+},`
+
+lite-server has vulnerability on date [25-06-2023]
+/*** Denial of Service ***/
+```````````
+    lite-server  *
+    Severity: high
+    lite-server vulnerable to Denial of Service - https://github.com/advisories/GHSA-89w7-5q45-r53w
+    No fix available
+    node_modules/lite-server
+
+    1 high severity vulnerability
+
+    Some issues need review, and may require choosing
+    a different dependency.
+```````````
+
+
+/* CLASSES EXAMPLES */
+/* INTERFACES */
+/* ABSTRACT CLASSES */
+=> difference between interface and abstract class and even the 
+    syntax resembles with that of the java.
+=> a class can't extents multiple class but implements multiple interfaces
+
+
+/* GENERICS */
+=> Go, and read generics docs
+    https://www.typescriptlang.org/docs/handbook/2/generics.html#handbook-content
+
+
+/* NARROWING */
+=> Go, and read NARROWING docs
+    https://www.typescriptlang.org/docs/handbook/2/narrowing.html#handbook-content
